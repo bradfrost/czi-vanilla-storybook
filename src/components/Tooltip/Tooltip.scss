@@ -1,0 +1,70 @@
+@import '../../css/scss/abstracts/variables.scss';
+@import '../../css/scss/abstracts/mixins.scss';
+
+/*------------------------------------*\
+    #TOOLTIP
+\*------------------------------------*/
+
+/**
+ * 1) An icon that appears 
+ */
+.cn-c-tooltip {
+  display: inline-block;
+  position: relative;
+  overflow: visible;
+}
+
+.cn-c-tooltip__trigger {
+  display: inline-block;
+  cursor: pointer;
+
+  &:focus {
+    @include focus;
+  }
+}
+
+.cn-c-tooltip__content {
+  display: none;
+  position: absolute;
+  bottom: 130%;
+  left: 50%;
+  margin-left: -96px;
+  width: 12rem;
+  padding: size(1);
+  background: $color-brand-blue;
+  box-shadow: $box-shadow-small;
+  color: $color-neutral-white;
+  border-radius: $border-radius;
+
+  &:focus {
+    @include focus();
+  }
+
+  .cn-c-tooltip.cn-is-active & {
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+  }
+
+  .cn-c-tooltip--right & {
+    bottom: auto;
+    top: -50%;
+    left: 130%;
+    margin-left: 0;
+  }
+
+  .cn-c-tooltip--below & {
+    bottom: inherit;
+  }
+
+  .cn-c-tooltip--left & {
+    bottom: auto;
+    left: auto;
+    top: -50%;
+    right: calc(130% + 5px);
+  }
+}
+
+.cn-c-tooltip__icon {
+  fill: $color-brand-blue;
+}

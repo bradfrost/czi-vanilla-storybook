@@ -1,0 +1,315 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`can be disabled 1`] = `
+<button
+  class="cn-c-btn"
+  disabled=""
+  tabindex="-1"
+>
+  <span
+    class="cn-c-btn__text"
+  >
+    Click
+  </span>
+</button>
+`;
+
+exports[`can be full width 1`] = `
+<button
+  class="cn-c-btn cn-c-btn--block"
+>
+  <span
+    class="cn-c-btn__text"
+  >
+    Click
+  </span>
+</button>
+`;
+
+exports[`can be inverted 1`] = `
+<button
+  class="cn-c-btn cn-c-btn--inverted"
+>
+  <span
+    class="cn-c-btn__text"
+  >
+    Click
+  </span>
+</button>
+`;
+
+exports[`can display loading 1`] = `
+<button
+  class="cn-c-btn cn-is-loading"
+>
+  <svg
+    aria-hidden="true"
+    class="cn-c-icon cn-c-btn__icon"
+    focusable="false"
+  >
+    <use
+      href="test-file-stub#test-loader"
+    />
+  </svg>
+  <span
+    class="cn-c-btn__text"
+  >
+    Click
+  </span>
+</button>
+`;
+
+exports[`can hide text 1`] = `
+<button
+  class="cn-c-btn"
+>
+  <span
+    class="cn-c-btn__text cn-u-is-vishidden"
+  >
+    Click
+  </span>
+</button>
+`;
+
+exports[`handles sizes 1`] = `
+<button
+  class="cn-c-btn cn-c-btn--large"
+>
+  <span
+    class="cn-c-btn__text"
+  >
+    Click
+  </span>
+</button>
+`;
+
+exports[`handles sizes 2`] = `
+<button
+  class="cn-c-btn cn-c-btn--small"
+>
+  <span
+    class="cn-c-btn__text"
+  >
+    Click
+  </span>
+</button>
+`;
+
+exports[`handles sizes 3`] = `
+<button
+  class="cn-c-btn cn-c-btn--tiny"
+>
+  <span
+    class="cn-c-btn__text"
+  >
+    Click
+  </span>
+</button>
+`;
+
+exports[`handles types 1`] = `
+<button
+  class="cn-c-btn"
+  type="button"
+>
+  <span
+    class="cn-c-btn__text"
+  >
+    Click
+  </span>
+</button>
+`;
+
+exports[`handles types 2`] = `
+<button
+  class="cn-c-btn"
+  type="reset"
+>
+  <span
+    class="cn-c-btn__text"
+  >
+    Click
+  </span>
+</button>
+`;
+
+exports[`handles types 3`] = `
+<button
+  class="cn-c-btn"
+  type="submit"
+>
+  <span
+    class="cn-c-btn__text"
+  >
+    Click
+  </span>
+</button>
+`;
+
+exports[`handles variants 1`] = `
+<button
+  class="cn-c-btn cn-c-btn--primary"
+>
+  <span
+    class="cn-c-btn__text"
+  >
+    Click
+  </span>
+</button>
+`;
+
+exports[`handles variants 2`] = `
+<button
+  class="cn-c-btn cn-c-btn--secondary"
+>
+  <span
+    class="cn-c-btn__text"
+  >
+    Click
+  </span>
+</button>
+`;
+
+exports[`handles variants 3`] = `
+<button
+  class="cn-c-btn cn-c-btn--tertiary"
+>
+  <span
+    class="cn-c-btn__text"
+  >
+    Click
+  </span>
+</button>
+`;
+
+exports[`handles variants 4`] = `
+<button
+  class="cn-c-btn cn-c-btn--bare"
+>
+  <span
+    class="cn-c-btn__text"
+  >
+    Click
+  </span>
+</button>
+`;
+
+exports[`handles variants 5`] = `
+<button
+  class="cn-c-btn cn-c-btn--link"
+>
+  <span
+    class="cn-c-btn__text"
+  >
+    Click
+  </span>
+</button>
+`;
+
+exports[`handles variants 6`] = `
+<button
+  class="cn-c-btn cn-c-btn--link-inverted"
+>
+  <span
+    class="cn-c-btn__text"
+  >
+    Click
+  </span>
+</button>
+`;
+
+exports[`handles variants 7`] = `
+<button
+  class="cn-c-btn cn-c-btn--ghost"
+>
+  <span
+    class="cn-c-btn__text"
+  >
+    Click
+  </span>
+</button>
+`;
+
+exports[`renders a button 1`] = `
+<button
+  class="cn-c-btn"
+>
+  <span
+    class="cn-c-btn__text"
+  >
+    Click
+  </span>
+</button>
+`;
+
+exports[`renders a link 1`] = `
+<a
+  class="cn-c-btn"
+  href="http://test.com"
+>
+  <span
+    class="cn-c-btn__text"
+  >
+    Click
+  </span>
+</a>
+`;
+
+exports[`renders icons 1`] = `
+<button
+  class="cn-c-btn"
+>
+  <svg
+    aria-hidden="true"
+    class="cn-c-icon cn-c-btn__icon"
+    focusable="false"
+  >
+    <use
+      href="test-file-stub#activity"
+    />
+  </svg>
+  <span
+    class="cn-c-btn__text"
+  >
+    Click
+  </span>
+</button>
+`;
+
+exports[`renders icons 2`] = `
+<button
+  class="cn-c-btn"
+>
+  <span
+    class="cn-c-btn__text"
+  >
+    Click
+  </span>
+  <svg
+    aria-hidden="true"
+    class="cn-c-icon cn-c-btn__icon"
+    focusable="false"
+  >
+    <use
+      href="test-file-stub#activity"
+    />
+  </svg>
+</button>
+`;
+
+exports[`renders screen reader text 1`] = `
+<button
+  class="cn-c-btn"
+>
+  <span
+    class="cn-c-btn__text"
+  >
+    Click
+    <span
+      class="cn-u-is-vishidden"
+    >
+      test
+    </span>
+  </span>
+</button>
+`;

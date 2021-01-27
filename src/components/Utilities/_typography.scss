@@ -1,0 +1,118 @@
+@import '../../css/scss/abstracts/variables.scss';
+@import '../../css/scss/abstracts/mixins.scss';
+
+/*------------------------------------*\
+    #TYPOGRAPHY UTILITIES
+\*------------------------------------*/
+
+/**
+ * Typography Preset 1
+ */
+.cn-u-typography-preset-1 {
+  @include typography-preset-1(!important);
+}
+
+/**
+ * Typography Preset 1 Bold
+ */
+.cn-u-typography-preset-1--bold {
+  @include typography-preset-1--bold(!important);
+}
+
+/**
+ * Typography Preset 2
+ */
+.cn-u-typography-preset-2 {
+  @include typography-preset-2(!important);
+}
+
+/**
+ * Typography Preset 2 Bold
+ */
+.cn-u-typography-preset-2--bold {
+  @include typography-preset-2--bold(!important);
+}
+
+/**
+ * Typography Preset 3
+ */
+.cn-u-typography-preset-3 {
+  @include typography-preset-3(!important);
+}
+
+/**
+ * Typography Preset 3 Bold
+ */
+.cn-u-typography-preset-3--bold {
+  @include typography-preset-3--bold(!important);
+}
+
+/**
+ * Typography Preset 4
+ */
+.cn-u-typography-preset-4 {
+  @include typography-preset-4(!important);
+}
+
+/**
+ * Typography Preset 4 Bold
+ */
+.cn-u-typography-preset-4--bold {
+  @include typography-preset-4--bold(!important);
+}
+
+/**
+ * Typography Preset 5
+ */
+.cn-u-typography-preset-5 {
+  @include typography-preset-5(!important);
+}
+
+/**
+ * Typography Preset 5 Bold
+ */
+.cn-u-typography-preset-5--bold {
+  @include typography-preset-5--bold(!important);
+}
+
+/**
+ * Typography Preset 6
+ */
+.cn-u-typography-preset-6 {
+  @include typography-preset-6(!important);
+}
+
+/**
+ * Typography Preset 6 Bold
+ */
+.cn-u-typography-preset-6--bold {
+  @include typography-preset-6--bold(!important);
+}
+
+/**
+ * Typography Preset 7
+ */
+.cn-u-typography-preset-7 {
+  @include typography-preset-7(!important);
+}
+
+/**
+ * Typography Preset 7 Bold
+ */
+.cn-u-typography-preset-7--bold {
+  @include typography-preset-7--bold(!important);
+}
+
+/**
+ * Typography Preset 8
+ */
+.cn-u-typography-preset-8 {
+  @include typography-preset-8(!important);
+}
+
+/**
+ * Typography Preset 8 Bold
+ */
+.cn-u-typography-preset-8--bold {
+  @include typography-preset-8--bold(!important);
+}

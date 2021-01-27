@@ -1,0 +1,45 @@
+@import '../../css/scss/abstracts/variables';
+@import '../../css/scss/abstracts/mixins';
+
+/*------------------------------------*\
+    # Table Cell
+\*------------------------------------*/
+
+/**
+ * 1) We must double up the selector to make these selectors more specific since .cn-c-table__cell
+ *    also has padding rules and we want these ones to override those base rules.
+ */
+
+.cn-c-table__cell.cn-c-table__cell--align-inset-left {
+  /* 1 */
+  padding-left: size(8);
+  text-align: left;
+}
+
+.cn-c-table--condensed .cn-c-table__cell.cn-c-table__cell--align-inset-left {
+  /* 1 */
+  @media all and (max-width: $bp-med) {
+    padding-left: size(1);
+  }
+}
+.cn-c-table:not(.cn-c-table--condensed)
+  .cn-c-table__cell.cn-c-table__cell--align-inset-left {
+  /* 1 */
+  @media all and (max-width: $bp-med) {
+    padding-left: size(4);
+  }
+}
+
+.cn-c-table__cell--align-left {
+  text-align: left;
+}
+.cn-c-table__cell--align-right {
+  text-align: right;
+}
+.cn-c-table__cell--align-center {
+  text-align: center;
+}
+
+.cn-c-table__cell--valign-center {
+  vertical-align: middle;
+}

@@ -1,0 +1,16 @@
+/*------------------------------------*\
+    #TEXT
+\*------------------------------------*/
+
+/**
+ * 1) Base styles relating to general text
+ */
+
+/**
+ * Strong and b tag base styles
+ * 1) Set to semibold since bold is too heavy
+ */
+strong,
+b {
+  font-weight: $font-weight-semibold;
+}

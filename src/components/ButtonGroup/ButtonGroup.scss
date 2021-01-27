@@ -1,0 +1,65 @@
+@import '../../css/scss/abstracts/variables';
+@import '../../css/scss/abstracts/mixins';
+
+/*------------------------------------*\
+    #BUTTON GROUP
+\*------------------------------------*/
+
+/**
+ * 1) A group of buttons displayed in a horizontal fashion
+ */
+.cn-c-btn-group {
+  display: flex;
+  align-items: center;
+
+  /**
+   * Immediate children of button group 
+   * 1) Always an individual button 
+   * 2) Space between individual buttons
+   */
+  & > * {
+    margin-right: size(2); /* 2 */
+  }
+
+  & > :last-child {
+    margin-right: 0;
+  }
+}
+
+/**
+ * Responsive button group
+ * 1) A button group that's stacked by default then moves side-by-side
+ *    when space becomes available 
+ */
+.cn-c-btn-group--responsive {
+  @media all and (max-width: $bp-small) {
+    display: block;
+
+    /**
+     * Immediate children of button group inside breaking button group
+     * 1) Apply margin-right only on larger screens
+     */
+    & > * {
+      width: 100%;
+      margin-right: 0; /* 1 */
+      margin-bottom: size(2); /* 1 */
+    }
+  }
+}
+
+/**
+ * Stacked button group
+ */
+.cn-c-btn-group--stacked {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  /**
+   * All direct descendants of the stacked button group
+   */
+  & > * {
+    margin-right: 0;
+    margin-bottom: size(1); /* 1 */
+  }
+}

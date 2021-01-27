@@ -1,0 +1,370 @@
+@import '../../css/scss/abstracts/variables.scss';
+@import '../../css/scss/abstracts/mixins.scss';
+
+/*------------------------------------*\
+    #SPACING UTILITY CLASSES
+\*------------------------------------*/
+
+/**
+ * Margin none
+ * 1) Forces margin to 0rem
+ */
+.cn-u-margin-none {
+  margin: 0 !important;
+}
+
+/**
+ * Margin small
+ * 1) Forces margin to 0.5rem
+ */
+.cn-u-margin-small {
+  margin: size(1) !important;
+}
+
+/**
+ * Margin
+ * 1) Forces margin to 1rem
+ */
+.cn-u-margin-medium {
+  margin: size(2) !important;
+}
+
+/**
+ * Margin large
+ * 1) Forces margin to 2rem
+ */
+.cn-u-margin-large {
+  margin: size(4) !important;
+}
+
+/**
+ * Margin top none
+ * 1) Forces margin top to 0rem
+ */
+.cn-u-margin-top-none {
+  margin-top: 0 !important;
+}
+
+/**
+ * Margin top small
+ * 1) Forces margin top to 0.5rem
+ */
+.cn-u-margin-top-small {
+  margin-top: size(1) !important;
+}
+
+/**
+ * Margin top
+ * 1) Forces margin top to 1rem
+ */
+.cn-u-margin-top-medium {
+  margin-top: size(2) !important;
+}
+
+/**
+ * Margin top large
+ * 1) Forces margin top to 2rem
+ */
+.cn-u-margin-top-large {
+  margin-top: size(4) !important;
+}
+
+/**
+ * Margin top xl
+ * 1) Forces margin top to 4rem
+ */
+.cn-u-margin-top-xl {
+  margin-top: size(6) !important;
+}
+
+/**
+ * Margin bottom XXL
+ * 1) Forces bottom margin to 6rem
+ */
+.cn-u-margin-top-xxl {
+  margin-top: size(12) !important;
+}
+
+/**
+ * Margin right
+ * 1) Forces right margin to 0rem
+ */
+.cn-u-margin-right-none {
+  margin-right: 0 !important;
+}
+
+/**
+ * Margin right small
+ * 1) Forces right margin to 0.5rem
+ */
+.cn-u-margin-right-small {
+  margin-right: size(1) !important;
+}
+
+/**
+ * Margin right
+ * 1) Forces right margin to 1rem
+ */
+.cn-u-margin-right-medium {
+  margin-right: size(2) !important;
+}
+
+/**
+ * Margin right large
+ * 1) Forces right margin to 2rem
+ */
+.cn-u-margin-right-large {
+  margin-right: size(4) !important;
+}
+
+/**
+ * Margin bottom
+ * 1) Forces bottom margin to 0rem
+ */
+.cn-u-margin-bottom-none {
+  margin-bottom: 0 !important;
+}
+
+/**
+ * Margin bottom small
+ * 1) Forces bottom margin to 0.5rem
+ */
+.cn-u-margin-bottom-small {
+  margin-bottom: size(1) !important;
+}
+
+/**
+ * Margin bottom
+ * 1) Forces bottom margin to 1rem
+ */
+.cn-u-margin-bottom-medium {
+  margin-bottom: size(2) !important;
+}
+
+/**
+ * Margin bottom large
+ * 1) Forces bottom margin to 2rem
+ */
+.cn-u-margin-bottom-large {
+  margin-bottom: size(4) !important;
+}
+
+/**
+ * Margin bottom extra large
+ * 1) Forces bottom margin to 3rem
+ */
+.cn-u-margin-bottom-xl {
+  margin-bottom: size(6) !important;
+}
+
+/**
+ * Margin bottom XXL
+ * 1) Forces bottom margin to 6rem
+ */
+.cn-u-margin-bottom-xxl {
+  margin-bottom: size(12) !important;
+}
+
+/**
+ * Margin left
+ * 1) Forces left margin to 0rem
+ */
+.cn-u-margin-left-none {
+  margin-left: 0 !important;
+}
+
+/**
+ * Margin left small
+ * 1) Forces left margin to 0.5rem
+ */
+.cn-u-margin-left-small {
+  margin-left: size(1) !important;
+}
+
+/**
+ * Margin left
+ * 1) Forces left margin to 1rem
+ */
+.cn-u-margin-left-medium {
+  margin-left: size(2) !important;
+}
+
+/**
+ * Margin left large
+ * 1) Forces left margin to 2rem
+ */
+.cn-u-margin-left-large {
+  margin-left: size(4) !important;
+}
+
+/**
+ * Margin left xl
+ * 1) Forces margin left to 4rem
+ */
+.cn-u-margin-left-xl {
+  margin-left: size(8) !important;
+}
+
+/*------------------------------------*\
+    #PADDING UTILITY CLASSES
+\*------------------------------------*/
+
+/**
+ * Padding none
+ * 1) Forces padding to 0rem
+ */
+.cn-u-padding-none {
+  padding: 0 !important;
+}
+
+/**
+ * Padding small
+ * 1) Forces padding to 0.5rem
+ */
+.cn-u-padding-small {
+  padding: size(1) !important;
+}
+
+/**
+ * Padding
+ * 1) Forces padding to 1rem
+ */
+.cn-u-padding-medium {
+  padding: size(2) !important;
+}
+
+/**
+ * Padding large
+ * 1) Forces padding to 2rem
+ */
+.cn-u-padding-large {
+  padding: size(4) !important;
+}
+
+/**
+ * Padding top none
+ * 1) Forces padding top to 0rem
+ */
+.cn-u-padding-top-none {
+  padding-top: 0 !important;
+}
+
+/**
+ * Padding top small
+ * 1) Forces padding top to 0.5rem
+ */
+.cn-u-padding-top-small {
+  padding-top: size(1) !important;
+}
+
+/**
+ * Padding top
+ * 1) Forces padding top to 1rem
+ */
+.cn-u-padding-top-medium {
+  padding-top: size(2) !important;
+}
+
+/**
+ * Padding top large
+ * 1) Forces padding top to 2rem
+ */
+.cn-u-padding-top-large {
+  padding-top: size(4) !important;
+}
+
+/**
+ * Padding right
+ * 1) Forces right padding to 0rem
+ */
+.cn-u-padding-right-none {
+  padding-right: 0 !important;
+}
+
+/**
+ * Padding right small
+ * 1) Forces right padding to 0.5rem
+ */
+.cn-u-padding-right-small {
+  padding-right: size(1) !important;
+}
+
+/**
+ * Padding right
+ * 1) Forces right padding to 1rem
+ */
+.cn-u-padding-right-medium {
+  padding-right: size(2) !important;
+}
+
+/**
+ * Padding right large
+ * 1) Forces right padding to 2rem
+ */
+.cn-u-padding-right-large {
+  padding-right: size(4) !important;
+}
+
+/**
+ * Padding bottom
+ * 1) Forces bottom padding to 0rem
+ */
+.cn-u-padding-bottom-none {
+  padding-bottom: 0 !important;
+}
+
+/**
+ * Padding bottom small
+ * 1) Forces bottom padding to 0.5rem
+ */
+.cn-u-padding-bottom-small {
+  padding-bottom: size(1) !important;
+}
+
+/**
+ * Padding bottom
+ * 1) Forces bottom padding to 1rem
+ */
+.cn-u-padding-bottom-medium {
+  padding-bottom: size(2) !important;
+}
+
+/**
+ * Padding bottom large
+ * 1) Forces bottom padding to 2rem
+ */
+.cn-u-padding-bottom-large {
+  padding-bottom: size(4) !important;
+}
+
+/**
+ * Padding left
+ * 1) Forces left padding to 0rem
+ */
+.cn-u-padding-left-none {
+  padding-left: 0 !important;
+}
+
+/**
+ * Padding left small
+ * 1) Forces left padding to 0.5rem
+ */
+.cn-u-padding-left-small {
+  padding-left: size(1) !important;
+}
+
+/**
+ * Padding left
+ * 1) Forces left padding to 1rem
+ */
+.cn-u-padding-left-medium {
+  padding-left: size(2) !important;
+}
+
+/**
+ * Padding left large
+ * 1) Forces left padding to 2rem
+ */
+.cn-u-padding-left-large {
+  padding-left: size(4) !important;
+}

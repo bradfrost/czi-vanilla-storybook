@@ -1,0 +1,110 @@
+/*------------------------------------*\
+    #STYLE GUIDE ONLY STYLES
+\*------------------------------------*/
+
+/**
+ * 1) Styleguide-only styles only ever show up inside of Storybook. 
+ *    These styles will not be included in production or anywhere  
+ *    outside Storybook
+ */
+
+$color-placeholder-blue: #69b3e7;
+
+/**
+ * For Placement Only (FPO) Block
+ * 1) A gray block that serves as a placeholder for a future component 
+ */
+.fpo {
+  background: lighten($color-placeholder-blue, 30%);
+  border: 1px dashed $color-placeholder-blue;
+  border-radius: 5px;
+  padding: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  text-align: center;
+  color: darken($color-placeholder-blue, 20%);
+}
+
+#root > .cn-c-datepickerfield {
+  min-height: 430px;
+}
+
+#root > .cn-c-autocomplete {
+  min-height: 330px;
+}
+
+#root > .cn-c-accordion,
+#root > .cn-c-alert,
+#root > .cn-c-autocomplete,
+#root > .cn-c-badge,
+#root > .cn-c-band,
+#root > .cn-c-box,
+#root > .cn-c-breadcrumbs,
+#root > .cn-c-btn,
+#root > .cn-c-btn-group,
+#root > .cn-c-card,
+#root > .cn-c-card-list,
+#root > .cn-c-checkbox,
+#root > .cn-c-checkbox-field,
+#root > .cn-c-counter,
+#root > .cn-c-datepickerfield,
+#root > .cn-c-definition-list,
+#root > .cn-c-feature,
+#root > .cn-c-flight-block,
+#root > .cn-c-footer-nav,
+#root > .cn-c-form,
+#root > .cn-c-global-nav,
+#root > .cn-c-heading,
+#root > .cn-c-hero,
+#root > .cn-c-horizontal-link-list,
+#root > .cn-c-hr,
+#root > .cn-c-icon,
+#root > .cn-c-inline-checkbox,
+#root > .cn-c-inline-form,
+#root > .cn-c-key-value-table,
+#root > .cn-c-label,
+#root > .cn-c-link-list,
+#root > .cn-c-media-block,
+#root > .cn-c-page-header,
+#root > .cn-c-radio,
+#root > .cn-c-radio-field,
+#root > .cn-c-responsive-link-list,
+#root > .cn-c-section,
+#root > .cn-c-select,
+#root > .cn-c-select-field,
+#root > .cn-c-show-hide,
+#root > .cn-c-slim-offer,
+#root > .cn-c-social-nav,
+#root > .cn-c-split-passage,
+#root > .cn-c-stacked-block,
+#root > .cn-c-stripe,
+#root > .cn-c-tabs,
+#root > .cn-c-table,
+#root > .cn-c-table-object,
+#root > .cn-c-tags,
+#root > .cn-c-textarea,
+#root > .cn-c-textarea-field,
+#root > .cn-c-textfield,
+#root > .cn-c-text-input,
+#root > .cn-c-text-link,
+#root > .cn-c-text-list,
+#root > .cn-c-text-passage,
+#root > .cn-c-tile,
+#root > .cn-c-toolbar,
+#root > .cn-c-tooltip,
+#root > {
+  margin: 1rem;
+}
+
+#root > .cn-c-flight-block--condensed,
+.sg-only .cn-c-flight-block--condensed {
+  max-width: 500px;
+}
+
+.cn-c-card {
+  max-width: 400px;
+}
+.cn-l-grid .cn-l-grid__item .cn-c-card {
+  max-width: none;
+}

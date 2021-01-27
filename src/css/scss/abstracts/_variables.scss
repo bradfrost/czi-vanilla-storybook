@@ -1,0 +1,106 @@
+@import './tokens.scss';
+
+//------------------------------------//
+//   #VARIABLES
+//------------------------------------//
+
+//------------------------------------//
+//   #COLORS
+//------------------------------------//
+
+// Brand Color Tints and Shades
+
+//  $color-brand-blue
+$color-tint-brand-rhapsody-blue-shade-light: lighten($color-brand-blue, 5%);
+
+// $color-brand-blue
+$color-tint-brand-atlantic-amethyst-shade-lightest: lighten(
+  $color-brand-blue,
+  45%
+);
+
+// $color-brand-blue
+$color-tint-brand-atlantic-amethyst-shade-light: lighten(
+  $color-brand-blue,
+  5.8%
+);
+
+$color-tint-brand-atlantic-amethyst-shade: darken($color-brand-blue, 17%);
+
+$color-tint-brand-atlantic-amethyst-shade-deep: darken($color-brand-blue, 25%);
+
+// Size
+// 1) The size function multiplies a provided value ($value)
+//    by the base sizing unit ($size-base-unit)
+// 2) $value should be limited to integers (e.g. 3) or half integers (e.g. 1.5)
+// 3) NOTE: This exists in variables (not in mixins) because this function is used for the Font Sizing below
+// and the CSS cascade requires this to be before those variables.
+@function size($value) {
+  @return $value * $size-base-unit; // size-value = 0.5rem
+}
+
+//------------------------------------//
+//   #SECOND-TIER VARIABLES
+//------------------------------------//
+
+// 1) Second-tier variables map tokens (first-tier variables)
+//    to applications. Second-tier variables can in turn
+//    be used by other components
+
+//------------------------------------//
+//   #FORMS SECOND-TIER
+//------------------------------------//
+
+// Form background colors
+$color-form-background-disabled: $color-neutral-gray-05;
+
+// Form border colors
+$color-form-border: $color-neutral-gray-50;
+$color-form-border-hover: $color-neutral-gray-60;
+$color-form-border-focus: $color-brand-blue;
+$color-form-border-error: $color-utility-error;
+$color-form-border-disabled: $color-neutral-gray-50;
+$color-form-border-inverted: rgba(159, 167, 173, 0.75);
+$color-form-border-inverted-hover: $color-neutral-white;
+$color-form-border-inverted-focus: $color-brand-blue;
+
+// Default form label color
+$color-form-label: $color-neutral-black;
+$color-form-label-disabled: $color-neutral-gray-42;
+$color-form-label-inverted: $color-neutral-white;
+
+// Toggle border color
+$color-toggle-border-color: $color-form-border;
+$color-toggle-border-color-hover: $color-brand-blue;
+$color-toggle-border-color-selected: $color-brand-blue;
+$toggle-box-shadow-selected: inset 0px 0px 0px $border-width
+  $color-toggle-border-color-selected;
+
+// The padding for text inputs, selects, and textareas
+$spacing-form-input-padding: size(1);
+// The spacing in between a label and the control that sits beneath it
+$spacing-form-label-block: size(0.5);
+
+// Focus color definitions
+// 1) This is the default focus outline color
+// 2) Focus outline color for elements on dark backgrounds
+$color-focus: $color-brand-blue; // 1
+$color-focus-inverted: $color-neutral-white; // 2
+
+//------------------------------------//
+//   #PRIMARY ACTION
+//------------------------------------//
+
+// 1) Used for UI elements that indicate primary actions
+//    such as submitting a form, choosing a date, etc
+$color-primary-action-background: $color-brand-blue;
+$color-primary-action-background-hover: $color-tint-brand-atlantic-amethyst-shade;
+$color-primary-action-background-active: $color-tint-brand-atlantic-amethyst-shade-deep;
+$color-primary-action-text: $color-neutral-white;
+
+//------------------------------------//
+//   #BOX SECOND-TIER
+//------------------------------------//
+
+$color-box-border: $color-neutral-gray-20;
+$spacing-box-padding: size(2);

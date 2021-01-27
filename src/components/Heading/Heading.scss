@@ -1,0 +1,94 @@
+@import '../../css/scss/abstracts/variables';
+@import '../../css/scss/abstracts/mixins';
+
+/*------------------------------------*\
+    #HEADING
+\*------------------------------------*/
+
+/**
+ * 1) h1, h2, h3, h4, h5, h6
+ * 2) Styles are either controlled by tagName or size declaration
+ */
+.cn-c-heading {
+  @include reset;
+
+  &.cn-c-heading--size-1 {
+    @include typography-preset-1--bold(!important, $margin: true);
+  }
+
+  &.cn-c-heading--size-2 {
+    @include typography-preset-2--bold(!important, $margin: true);
+  }
+
+  &.cn-c-heading--size-3 {
+    @include typography-preset-3--bold(!important, $margin: true);
+  }
+
+  &.cn-c-heading--size-4 {
+    @include typography-preset-4--bold(!important, $margin: true);
+  }
+
+  &.cn-c-heading--size-5 {
+    @include typography-preset-5--bold(!important, $margin: true);
+  }
+
+  &.cn-c-heading--size-6 {
+    @include typography-preset-6--bold(!important, $margin: true);
+  }
+
+  &.cn-c-heading--size-7 {
+    @include typography-preset-7--bold(!important);
+  }
+
+  &.cn-c-heading--size-8 {
+    @include typography-preset-8--bold(!important);
+  }
+}
+
+/**
+ * H1 Heading
+ * 1) Use this for the default heading if tagName = h1
+ */
+h1.cn-c-heading {
+  @include typography-preset-1--bold($margin: true, $responsive: true);
+}
+
+/**
+ * H2 Heading
+ * 1) Use this for the default heading if tagName = h2
+ */
+h2.cn-c-heading {
+  @include typography-preset-2--bold($margin: true, $responsive: true);
+}
+
+/**
+ * H3 Heading
+ * 1) Use this for the default heading if tagName = h3
+ */
+h3.cn-c-heading {
+  @include typography-preset-3--bold($margin: true, $responsive: true);
+}
+
+/**
+ * H4 Heading
+ * 1) Use this for the default heading if tagName = h4
+ */
+h4.cn-c-heading {
+  @include typography-preset-4--bold($margin: true, $responsive: true);
+}
+
+/**
+ * H5 Heading
+ * 1) Use this for the default heading if tagName = h5
+ */
+h5.cn-c-heading {
+  @include typography-preset-5--bold($margin: true, $responsive: true);
+}
+
+/**
+ * H6 Heading
+ * 1) Use this for the default heading if tagName = h6
+ */
+h6.cn-c-heading {
+  @include typography-preset-6--bold($margin: true);
+}

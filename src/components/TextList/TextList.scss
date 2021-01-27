@@ -1,0 +1,89 @@
+@import '../../css/scss/abstracts/variables';
+@import '../../css/scss/abstracts/mixins';
+
+/*------------------------------------*\
+    #TEXT LIST
+\*------------------------------------*/
+
+/**
+ * 1) Basic list of lines of text that can contain optional inline items afterwards
+ */
+.cn-c-text-list {
+  @include reset;
+  list-style: none;
+  padding-left: 0;
+}
+
+.cn-c-text-list--ol {
+  padding-left: size(2.25);
+  list-style-type: decimal;
+  .cn-c-text-list__item {
+    padding-left: size(1);
+  }
+}
+
+.cn-c-text-list--small {
+  @include typography-preset-6;
+}
+
+.cn-c-text-list--tiny {
+  @include typography-preset-7;
+}
+
+.cn-c-text-list--inline {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cn-c-text-list__item {
+  .cn-c-text-list--inline & {
+    display: flex;
+    margin-left: size(2);
+
+    &:before {
+      content: '';
+      display: block;
+      height: size(1);
+      width: size(1);
+      position: relative;
+      top: size(1);
+      left: -(size(1));
+      background: $color-neutral-black;
+      border-radius: 50%;
+    }
+
+    &:first-child {
+      margin-left: 0;
+
+      &:before {
+        content: none;
+      }
+    }
+  }
+
+  .cn-c-text-list--inverted & {
+    color: $color-neutral-white;
+  }
+
+  .cn-c-text-list--small.cn-c-text-list--inline & {
+    &:before {
+      height: size(0.5);
+      width: size(0.5);
+      top: size(1.25);
+    }
+  }
+
+  .cn-c-text-list--inverted.cn-c-text-list--inline & {
+    &:before {
+      background: $color-neutral-white;
+    }
+  }
+
+  .cn-c-text-list--tiny.cn-c-text-list--inline & {
+    &:before {
+      top: size(1);
+      height: size(0.5);
+      width: size(0.5);
+    }
+  }
+}

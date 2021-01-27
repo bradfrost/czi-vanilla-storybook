@@ -1,0 +1,30 @@
+@import '../../css/scss/abstracts/variables.scss';
+@import '../../css/scss/abstracts/mixins.scss';
+
+/*------------------------------------*\
+    #ALIGNMENT UTILITY CLASSES
+\*------------------------------------*/
+
+/** 
+ * Left align text
+ * 1) Forces text-align to left
+ */
+.cn-u-text-align-left {
+  text-align: left !important;
+}
+
+/** 
+ * center align text
+ * 1) Forces text-align to center
+ */
+.cn-u-text-align-center {
+  text-align: center !important;
+}
+
+/** 
+ * Right align text
+ * 1) Forces text-align to right
+ */
+.cn-u-text-align-right {
+  text-align: right !important;
+}

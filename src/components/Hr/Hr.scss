@@ -1,0 +1,24 @@
+@import '../../css/scss/abstracts/variables';
+@import '../../css/scss/abstracts/mixins';
+
+/*------------------------------------*\
+    # HR (HORIZONTAL RULE)
+\*------------------------------------*/
+
+/**
+ * 1) Line that acts as a separator of content
+ * 
+ */
+.cn-c-hr {
+  margin-top: size(4);
+  margin-bottom: size(4);
+  border: $border-width solid $color-neutral-gray-05;
+}
+
+/**
+ * Hr Thick
+ * 1) Horizontal rule with a thick border
+ */
+.cn-c-hr--thick {
+  border: $border-width-med solid $color-neutral-gray-05;
+}

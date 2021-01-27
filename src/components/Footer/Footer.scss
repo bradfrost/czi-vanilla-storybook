@@ -1,0 +1,14 @@
+@import '../../css/scss/abstracts/variables';
+@import '../../css/scss/abstracts/mixins';
+
+/*------------------------------------*\
+    #FOOTER
+\*------------------------------------*/
+
+/**
+ * 1) 
+ */
+.atm-c-footer {
+  background-color: $color-neutral-gray-10;
+  padding: size(4);
+}

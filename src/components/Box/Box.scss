@@ -1,0 +1,28 @@
+@import '../../css/scss/abstracts/variables';
+@import '../../css/scss/abstracts/mixins';
+
+/*------------------------------------*\
+    #BOX BUTTON
+\*------------------------------------*/
+
+/**
+ * 1) A box-style button
+ */
+.cn-c-box {
+  @include boxStyles();
+
+  .cn-is-active & {
+    box-shadow: inset 0px 0px 0px $border-width-med $color-form-border-focus;
+  }
+}
+
+.cn-c-box--flush {
+  padding: 0;
+}
+
+.cn-c-box--align-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

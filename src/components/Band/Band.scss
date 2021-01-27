@@ -1,0 +1,27 @@
+@import '../../css/scss/abstracts/variables';
+@import '../../css/scss/abstracts/mixins';
+
+/*------------------------------------*\
+    #BAND
+\*------------------------------------*/
+
+/**
+ * 1) A band is a container with a background color that occupies
+ *    the full-width of the viewport
+ */
+.cn-c-band {
+  padding-top: size(4);
+  padding-bottom: size(4);
+  background-color: $color-neutral-gray-05;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/**
+ * Braned Band
+ * 1) A variant of the band that uses the primary brand
+ *    color as a background
+ */
+.cn-c-band--brand {
+  background-color: $color-brand-blue;
+}

@@ -1,0 +1,22 @@
+@import '../../css/scss/abstracts/variables';
+@import '../../css/scss/abstracts/mixins';
+
+/*------------------------------------*\
+    #MAIN ELEMENT
+\*------------------------------------*/
+
+/**
+ * 1) 
+ */
+.cn-c-main {
+  display: block;
+  flex: 1 0 auto;
+  padding-bottom: size(8);
+
+  /**
+     * Main element inside fixed layout
+     */
+  .cn-l-sidebar--fixed & {
+    padding-top: size(4);
+  }
+}

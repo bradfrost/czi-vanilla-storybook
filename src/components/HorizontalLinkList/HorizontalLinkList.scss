@@ -1,0 +1,68 @@
+@import '../../css/scss/abstracts/_variables.scss';
+@import '../../css/scss/abstracts/_mixins.scss';
+
+/*------------------------------------*\
+    #LINK LIST
+\*------------------------------------*/
+
+/**
+ * 1) List of horizontal links
+ */
+.cn-c-horizontal-link-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+  list-style: none;
+}
+
+/**
+ * Horizontal link list item
+ */
+.cn-c-horizontal-link-list__item {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: size(2);
+  margin-right: size(4);
+
+  .cn-c-horizontal-link-list--small & {
+    margin-right: size(1);
+    padding-right: size(1);
+    margin-bottom: size(0.5);
+  }
+}
+
+/**
+ * Horizontal link list link
+ */
+.cn-c-horizontal-link-list__link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include text-link;
+
+  /**
+     * Horizontal link list link within small horizontal link list
+     */
+  .cn-c-horizontal-link-list--small & {
+    font-size: $font-size-sm;
+  }
+
+  .cn-c-horizontal-link-list--inverted & {
+    color: $color-neutral-white;
+  }
+}
+
+.cn-c-horizontal-link-list__icon {
+  height: size(3);
+  width: size(3);
+  margin-bottom: size(1);
+  transition: fill $anim-fade-quick $anim-ease;
+}
+
+.cn-c-horizontal-link-list__meta {
+  margin-left: size(0.5);
+
+  .cn-c-horizontal-link-list--small & {
+    @include typography-preset-7;
+  }
+}

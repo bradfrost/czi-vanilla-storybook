@@ -1,0 +1,439 @@
+@import '../../css/scss/abstracts/variables';
+@import '../../css/scss/abstracts/mixins';
+
+/*------------------------------------*\
+	#TABLE
+\*------------------------------------*/
+
+/**
+ * 1) Data Table
+ */
+.cn-c-table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  margin-bottom: size(2);
+  position: relative;
+}
+
+/**
+ * Condensed table
+ * 1) removes the bottom margin from the table, for use in boxes
+ */
+.cn-c-table--condensed {
+  margin-bottom: 0;
+}
+
+/**
+ * Stacked table
+ * 1) A data table that displays as stacked "cards" on
+ *    small screens
+ */
+.cn-c-table--stacked {
+  display: block;
+
+  @media all and (min-width: $bp-med) {
+    display: table;
+  }
+}
+
+/**
+ * Lined Table
+ * 1) Adds a border around the table
+ */
+.cn-c-table--lined {
+  border-width: $border-width; /* 1 */
+  border-style: solid; /* 1 */
+  border-color: $color-neutral-gray-20; /* 1 */
+}
+
+/**
+ * Fixed table
+ * 1) Table and column widths are set by the widths of table and col elements or by the width of the first row of cells
+ */
+.cn-c-table--fixed {
+  table-layout: fixed; /* 1 */
+}
+
+/**
+ * Grid table
+ * 1) Separated table cells
+ * 1) Allows cell content to expand if item is set to height 100%
+ */
+.cn-c-table--grid {
+  border-collapse: separate;
+  border-spacing: size(1);
+  height: 100%;
+}
+
+/**
+ * Table Caption
+ */
+.cn-c-table__caption {
+  @include typography-preset-4;
+  text-align: left;
+  margin-bottom: size(1);
+}
+
+/**
+ * Table Header
+ * 1) First row of a table that contains the table header cells
+ */
+.cn-c-table__header {
+  /**
+     * Table header inside a stacked table
+     * 1) Hide on small screens
+     */
+  .cn-c-table--stacked & {
+    display: none;
+
+    @media all and (min-width: $bp-med) {
+      display: table-header-group; /* 1 */
+    }
+  }
+}
+
+/**
+ * Table body
+ * 1) <tbody> tag, contains the table rows in the body of the table
+ */
+.cn-c-table__body {
+  .cn-c-table--stacked > & {
+    display: block;
+    width: 100%;
+
+    @media all and (min-width: $bp-med) {
+      display: table-row-group;
+    }
+  }
+}
+
+/**
+ * Table Row
+ */
+.cn-c-table__row {
+  vertical-align: top;
+  border-bottom-width: $border-width;
+  border-bottom-style: solid;
+  border-bottom-color: $color-neutral-gray-20;
+
+  /**
+     * Last table row in the table
+     */
+  &:last-child {
+    border-bottom: 0;
+  }
+
+  /**
+     * Table row inside a stacked table
+     */
+  .cn-c-table--stacked & {
+    display: table-row;
+  }
+
+  /**
+     * Rows inside the body of a stacked table
+     * 1) Add a border around the stacked row
+     */
+  .cn-c-table--stacked > .cn-c-table__body > & {
+    @media all and (max-width: $bp-med) {
+      display: block;
+      width: 100%;
+      border: $border-width solid $color-neutral-gray-20; /* 1 */
+      border-radius: $border-radius;
+      margin-bottom: size(2);
+    }
+  }
+}
+
+/**
+ * Bare table row
+ * 1) Removes border
+ */
+.cn-c-table__row--bare {
+  border-bottom: none; /* 1 */
+}
+
+/**
+ * Clickable table row
+ * 1) Indicates a clickable table row
+ */
+.cn-c-table__row--clickable {
+  cursor: pointer;
+
+  &:hover {
+    background: $color-neutral-gray-05;
+  }
+}
+
+/**
+ * Table Cell
+ */
+.cn-c-table__cell {
+  padding: size(2) size(1);
+
+  /**
+     * Condensed table
+     * 1) shrinks padding between table rows
+     */
+  .cn-c-table--condensed & {
+    padding: size(1) size(1); /* 1 */
+  }
+
+  /**
+   * Table header cells
+   */
+  .cn-c-table__header & {
+    text-align: left;
+    position: relative;
+    padding: size(2) size(1.5) size(2) size(1);
+    @include typography-preset-5--bold;
+    border-bottom-width: $border-width-large;
+    border-bottom-style: solid;
+    border-bottom-color: $color-neutral-gray-50;
+    background-clip: padding-box;
+
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: calc(100% + #{$border-width-large});
+      width: $border-width-large;
+      background: $color-neutral-white;
+    }
+
+    &:last-child {
+      border-right-width: 0;
+      padding-right: size(1);
+      &:after {
+        content: none;
+      }
+    }
+
+    &.cn-c-table__cell--align-left {
+      text-align: left;
+    }
+    &.cn-c-table__cell--align-right {
+      text-align: right;
+    }
+    &.cn-c-table__cell--align-center {
+      text-align: center;
+    }
+
+    &.cn-c-table__cell--valign-center {
+      vertical-align: middle;
+    }
+  }
+
+  /**
+   * Table header cells inside a grid table 
+   `*/
+  .cn-c-table--grid .cn-c-table__header & {
+    padding-top: size(2);
+    padding-bottom: size(2);
+
+    &:after {
+      content: none;
+    }
+  }
+
+  /**
+     * Table header cells inside a stacked table
+     * 1) Space table cells
+     */
+  .cn-c-table--stacked & {
+    @media all and (max-width: $bp-med) {
+      padding: size(2); /* 1 */
+    }
+  }
+
+  /**
+     * Header table cells in a stacked table
+     */
+  .cn-c-table--stacked .cn-c-table__header & {
+    @media all and (max-width: $bp-med) {
+      &:after {
+        content: none;
+      }
+    }
+  }
+
+  /**
+     * Table cell inside a stacked table
+     * 1) Take data-heading attribute and display
+     *    that value as a block-level title above
+     *    each table cell
+     * 2) Hide data-heading on large screens since
+     *    table header cells become visible
+     */
+  .cn-c-table--stacked & {
+    display: block;
+    padding-left: size(2);
+    padding-right: size(2);
+
+    &:before {
+      content: attr(data-heading); /* 1 */
+      display: block;
+      @include typography-preset-5--bold;
+
+      @media all and (min-width: $bp-med) {
+        content: none; /* 2 */
+      }
+    }
+
+    @media all and (min-width: $bp-med) {
+      display: table-cell;
+      padding: size(2) size(1);
+    }
+  }
+
+  /**
+     * Table cell inside a lined table
+     */
+  .cn-c-table--lined & {
+    border-width: $border-width;
+    border-style: solid;
+    border-color: $color-neutral-gray-42;
+  }
+
+  /**
+     * First table cell inside a lined table
+     */
+  .cn-c-table--lined &:first-child {
+    border-left: none;
+  }
+
+  /**
+     * Last table cell inside a lined table
+     */
+  .cn-c-table--lined &:last-child {
+    border-right: none;
+  }
+
+  /**
+     * Table cell inside a lined table's header
+     */
+  .cn-c-table--lined .cn-c-table__header & {
+    border-bottom-width: $border-width-large;
+    &:after {
+      content: none;
+    }
+  }
+
+  /**
+   * Table cell inside a lined table with stacked behavior
+   * 1) Remove table cell borders on small screens since
+   *    cells stack on top of each other and are displayed
+   *    as a single cluster with headings
+   */
+  .cn-c-table--stacked.cn-c-table--lined & {
+    @media all and (max-width: $bp-med) {
+      border: 0; /* 1 */
+    }
+  }
+
+  /**
+   * First table cell within each row directly within table body of stacked table
+   */
+  .cn-c-table--stacked.cn-c-table--stacked-first-cell-heading
+    > .cn-c-table__body
+    > .cn-c-table__row
+    > & {
+    &:first-child {
+      @media all and (max-width: $bp-med) {
+        @include typography-preset-3;
+      }
+    }
+  }
+
+  /**
+   * Table cell inside a clickable table row
+   * 1) Mimic clickable link styles
+   */
+  .cn-c-table__row--clickable & {
+    @include text-link; /* 1 */
+  }
+
+  /**
+   * Table cell inside a grid table
+   * 1) removes padding from table cells since
+   *    spacing is controlled by grid-gap
+   */
+  .cn-c-table--grid & {
+    padding: 0;
+  }
+
+  /**
+   * Lists inside table
+   * 1) If text wraps onto a new line, it gets indented
+   */
+  > ul,
+  > ol {
+    @include reset;
+    list-style: none;
+
+    > li {
+      margin-left: 1rem; /* 1 */
+      text-indent: -1rem; /* 1 */
+    }
+  }
+}
+
+/**
+ * Table Footer Cell
+ */
+.cn-c-table__footer-cell {
+  padding: size(2);
+}
+
+.cn-c-table__cell-icon {
+  display: none;
+}
+
+/**
+ * Nested table
+ */
+.cn-c-table .cn-c-table {
+  margin-bottom: 0;
+}
+
+/**
+ * Table cell within a nested table that isn't a table header cell
+ */
+.cn-c-table--stacked .cn-c-table .cn-c-table__cell:not(th) {
+  padding-top: 0;
+
+  @media all and (min-width: $bp-med) {
+    padding-top: size(2);
+  }
+}
+
+/**
+ * Table header cell within a nested table
+ */
+.cn-c-table .cn-c-table th.cn-c-table__cell {
+  padding-top: 0;
+  padding-bottom: 0;
+  text-align: left;
+  @include typography-preset-5--bold;
+
+  @media all and (min-width: $bp-med) {
+    width: 60%;
+    padding-top: size(2);
+    padding-bottom: size(2);
+    @include typography-preset-5;
+  }
+}
+
+/**
+ * Table header cell within a nested table
+ */
+.cn-c-table .cn-c-table .cn-c-table__row:first-child th.cn-c-table__cell {
+  padding-top: 0;
+
+  @media all and (min-width: $bp-med) {
+    padding-top: size(2);
+  }
+}

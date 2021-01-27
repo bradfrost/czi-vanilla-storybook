@@ -1,0 +1,164 @@
+@import '../../css/scss/abstracts/variables';
+@import '../../css/scss/abstracts/mixins';
+
+/*------------------------------------*\
+    #LAYOUT SIDEBAR
+\*------------------------------------*/
+
+/**
+ * 1) Layout Sidebar is a two-column layout consisting of
+ *    a main column and a sidebar column
+ */
+.cn-l-sidebar {
+  @media all and (min-width: $bp-large) {
+    display: flex;
+  }
+
+  @supports (display: grid) {
+    grid-template-columns: repeat(1, 1fr);
+
+    @media all and (min-width: $bp-large) {
+      display: grid;
+      grid-gap: 0 size(6);
+      grid-template-columns: repeat(12, 1fr);
+    }
+  }
+}
+
+/**
+ * Sidebar fixed layout
+ * 1) Layout forces the sidebar to be fixed on larger screens
+ */
+.cn-l-sidebar--fixed {
+  @media all and (min-width: $bp-large) {
+    display: block;
+  }
+}
+
+/**
+ * Main Content
+ */
+.cn-l-sidebar__main {
+  @media all and (min-width: $bp-large) {
+    width: 75%;
+  }
+
+  @supports (display: grid) {
+    margin-bottom: size(4);
+
+    @media all and (min-width: $bp-large) {
+      width: auto;
+      grid-column: 1 / 9;
+      grid-row: 1;
+      margin-bottom: 0;
+    }
+  }
+
+  /**
+     * Main content within sidebar reversed layout
+     * 1) Places the sidebar on the left and the main content on the right on larger screens
+     */
+  .cn-l-sidebar--reversed & {
+    @media all and (min-width: $bp-large) {
+      order: 1;
+    }
+    @supports (display: grid) {
+      @media all and (min-width: $bp-large) {
+        grid-column: 4 / 13;
+        grid-row: 1;
+      }
+    }
+  }
+
+  /**
+     * Main content within fixed sidebar layout
+     * 1) Margin left should equal the width of the sidebar
+     */
+  .cn-l-sidebar--fixed & {
+    @media all and (min-width: $bp-large) {
+      margin-left: 18rem; /* 1 */
+    }
+  }
+
+  /**
+     * Sidebar content within narrow sidebar layout
+     */
+  .cn-l-sidebar--narrow & {
+    @media all and (min-width: $bp-large) {
+      width: 83.33%;
+    }
+    @supports (display: grid) {
+      @media all and (min-width: $bp-large) {
+        width: 100%;
+        grid-column: 1 / 11;
+      }
+    }
+  }
+}
+
+/**
+ * Sidebar Content
+ */
+.cn-l-sidebar__sidebar {
+  margin-top: size(4);
+
+  @media all and (min-width: $bp-large) {
+    width: 25%;
+    margin-top: 0;
+    margin-left: size(4);
+  }
+
+  @supports (display: grid) {
+    margin-top: 0;
+
+    @media all and (min-width: $bp-large) {
+      margin-left: 0;
+      width: auto;
+      grid-column: 9 / 13;
+      grid-row: 1;
+    }
+  }
+
+  /**
+     * Sidebar content within reversed sidebar layout
+     */
+  .cn-l-sidebar--reversed & {
+    @media all and (min-width: $bp-large) {
+      order: 2;
+    }
+    @supports (display: grid) {
+      @media all and (min-width: $bp-large) {
+        grid-column: 1 / 4;
+        grid-row: 1;
+      }
+    }
+  }
+
+  /**
+     * Sidebar content within fixed sidebar layout
+     */
+  .cn-l-sidebar--fixed & {
+    @media all and (min-width: $bp-large) {
+      position: fixed;
+      height: 100vh;
+      width: 18rem;
+      overflow: auto;
+      z-index: 2;
+    }
+  }
+
+  /**
+     * Sidebar content within narrow sidebar layout
+     */
+  .cn-l-sidebar--narrow & {
+    @media all and (min-width: $bp-large) {
+      width: 16.66%;
+    }
+    @supports (display: grid) {
+      @media all and (min-width: $bp-large) {
+        width: 100%;
+        grid-column: 11 / 13;
+      }
+    }
+  }
+}

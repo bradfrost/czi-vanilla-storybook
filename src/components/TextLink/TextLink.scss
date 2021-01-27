@@ -1,0 +1,38 @@
+@import '../../css/scss/abstracts/variables';
+@import '../../css/scss/abstracts/mixins';
+
+/*------------------------------------*\
+    #TEXT LINK
+\*------------------------------------*/
+
+/**
+ * 1) <a> tag styled like a text link
+ */
+.cn-c-text-link {
+  @include text-link;
+  cursor: pointer;
+}
+
+/**
+ * Inverted text link
+ * 1) Text color is lighter for use on dark backgrounds
+ */
+.cn-c-text-link--inverted {
+  color: $color-neutral-white;
+
+  &:hover {
+    color: $color-neutral-gray-20;
+  }
+
+  &:focus {
+    @include focusInverted;
+  }
+
+  .cn-c-text-passage & {
+    color: $color-neutral-white;
+  }
+}
+
+.cn-c-text-link--bold {
+  font-weight: $font-weight-semibold;
+}

@@ -1,0 +1,29 @@
+@import '../../css/scss/abstracts/variables';
+@import '../../css/scss/abstracts/mixins';
+
+/*------------------------------------*\
+    #
+\*------------------------------------*/
+
+/**
+ * 1) 
+ */
+.cn-c-loading-indicator {
+}
+
+.cn-c-loading-indicator__icon {
+  height: 5rem;
+  width: 5rem;
+  fill: $color-brand-blue;
+  animation: rotateIcon 2s linear infinite;
+}
+
+/* The animation code */
+@keyframes rotateIcon {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

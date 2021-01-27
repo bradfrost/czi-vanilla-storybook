@@ -1,0 +1,62 @@
+@import '../../css/scss/abstracts/variables.scss';
+@import '../../css/scss/abstracts/mixins.scss';
+
+/*------------------------------------*\
+    #COLOR UTILITY CLASSES
+\*------------------------------------*/
+
+/**
+ * Success utility
+ * 1) Forces color of text to be the success variable
+ */
+.cn-u-color-utility-success {
+  color: $color-utility-success !important;
+}
+
+/**
+ * Error utility
+ * 1) Forces color of text to be the error variable
+ */
+.cn-u-color-utility-error {
+  color: $color-utility-error !important;
+}
+
+/**
+ * Warning utility
+ * 1) Forces color of text to be the Warning variable
+ */
+.cn-u-color-utility-warning {
+  color: $color-utility-warning !important;
+}
+
+/**
+ * Info utility
+ * 1) Forces color of text to be the Info variable
+ */
+.cn-u-color-utility-info {
+  color: $color-neutral-gray-50 !important;
+}
+
+/**
+ * Rhapsody blue color
+ * 1) Forces color of text to be rhapsody blue
+ */
+.cn-u-color-brand-rhapsody-blue {
+  color: $color-brand-blue !important;
+}
+
+/**
+ * Atlantic amethyst color
+ * 1) Forces color of text to be atlantic amethyst
+ */
+.cn-u-color-brand-atlantic-amethyst {
+  color: $color-brand-blue !important;
+}
+
+/**
+ * Neutral gray 42
+ * 1) Forces color of text to be neutral gray 42
+ */
+.cn-u-color-neutral-gray-42 {
+  color: $color-neutral-gray-42 !important;
+}

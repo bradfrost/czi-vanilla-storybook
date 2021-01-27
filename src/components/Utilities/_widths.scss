@@ -1,0 +1,30 @@
+@import '../../css/scss/abstracts/variables.scss';
+@import '../../css/scss/abstracts/mixins.scss';
+
+/*------------------------------------*\
+    #WIDTH UTILITY CLASSES
+\*------------------------------------*/
+
+/** 
+ * Width 100%
+ * 1) Forces width to 100%
+ */
+.cn-u-width-100 {
+  width: 100% !important;
+}
+
+/** 
+ * Width 50%
+ * 1) Forces width to 50%
+ */
+.cn-u-width-50 {
+  width: 50% !important;
+}
+
+/** 
+ * Max Width 50%
+ * 1) Forces max-width to 50%
+ */
+.cn-u-max-width-50 {
+  max-width: 50% !important;
+}

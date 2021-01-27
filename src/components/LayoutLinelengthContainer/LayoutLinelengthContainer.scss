@@ -1,0 +1,14 @@
+@import '../../css/scss/abstracts/variables';
+@import '../../css/scss/abstracts/mixins';
+
+/*------------------------------------*\
+    #LINELENGTH CONTAINER
+\*------------------------------------*/
+
+/**
+ * Linelength Container
+ * 1) Caps the length of an excerpt of text to be easily readable
+ */
+.cn-l-linelength-container {
+  max-width: $l-linelength-width; /* 1 */
+}

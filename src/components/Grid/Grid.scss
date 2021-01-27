@@ -1,0 +1,243 @@
+@import '../../css/scss/abstracts/variables';
+@import '../../css/scss/abstracts/mixins';
+
+/*------------------------------------*\
+    #LAYOUT GRID
+\*------------------------------------*/
+
+/**
+ * 1) Layout Grid is a flexible component
+ *    allowing for a variety of responsive layout
+ *    components
+ */
+.cn-l-grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 - (size(1.5));
+
+  > * {
+    padding: size(1.5);
+    width: 100%;
+  }
+
+  @supports (display: grid) {
+    margin: 0;
+    display: grid;
+    grid-row-gap: size(3);
+    grid-column-gap: size(3);
+
+    > * {
+      padding: 0;
+      width: auto;
+    }
+  }
+}
+
+.cn-l-grid--spacing-none {
+  @supports (display: grid) {
+    grid-row-gap: 0;
+    grid-column-gap: 0;
+  }
+}
+
+.cn-l-grid--spacing-small {
+  @supports (display: grid) {
+    grid-row-gap: size(1.5);
+    grid-column-gap: size(1.5);
+  }
+}
+
+.cn-l-grid--spacing-large {
+  @supports (display: grid) {
+    grid-row-gap: size(4);
+    grid-column-gap: size(4);
+  }
+}
+
+.cn-l-grid--spacing-xl {
+  @supports (display: grid) {
+    grid-row-gap: size(6);
+    grid-column-gap: size(6);
+  }
+}
+
+.cn-l-grid--row-spacing-none {
+  @supports (display: grid) {
+    grid-row-gap: 0;
+  }
+}
+
+.cn-l-grid--row-spacing-small {
+  @supports (display: grid) {
+    grid-row-gap: size(1.5);
+  }
+}
+
+.cn-l-grid--row-spacing-large {
+  @supports (display: grid) {
+    grid-row-gap: size(4);
+  }
+}
+
+.cn-l-grid--row-spacing-xl {
+  @supports (display: grid) {
+    grid-row-gap: size(6);
+  }
+}
+
+.cn-l-grid--column-spacing-none {
+  @supports (display: grid) {
+    grid-column-gap: 0;
+  }
+}
+
+.cn-l-grid--column-spacing-small {
+  @supports (display: grid) {
+    grid-column-gap: size(1.5);
+  }
+}
+
+.cn-l-grid--column-spacing-large {
+  @supports (display: grid) {
+    grid-column-gap: size(4);
+  }
+}
+
+.cn-l-grid--column-spacing-xl {
+  @supports (display: grid) {
+    grid-column-gap: size(6);
+  }
+}
+
+/**
+ * 1 to 3 grid pattern
+ * 1) This pattern stacks grid items on top of each
+ *    other until they can sit comfortably beside each other 
+ */
+.cn-l-grid--1-to-3up {
+  margin: 0 - (size(1.5));
+
+  @media all and (min-width: $bp-large) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 - (size(1.5));
+  }
+
+  @supports (display: grid) {
+    display: grid;
+    margin: 0;
+
+    @media all and (min-width: $bp-large) {
+      grid-template-columns: 1fr 1fr 1fr; /* 2 */
+    }
+  }
+}
+
+.cn-l-grid--side-by-side {
+  grid-template-columns: 1fr 1fr; /* 2 */
+}
+
+/**
+ * 2up grid pattern
+ * 1) This pattern stacks grid items on top of each
+ *    other until they can sit comfortably beside each other 
+ */
+.cn-l-grid--2up {
+  @media all and (min-width: $bp-med) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 - (size(1.5));
+  }
+
+  @supports (display: grid) {
+    display: grid;
+    margin: 0;
+
+    @media all and (min-width: $bp-med) {
+      grid-template-columns: 1fr 1fr; /* 2 */
+    }
+  }
+}
+
+/**
+ * 3up grid pattern
+ * 1) This pattern stacks grid items on top of each
+ *    other until they can sit comfortably beside each other 
+ */
+.cn-l-grid--3up {
+  @media all and (min-width: $bp-med) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 - (size(1.5));
+  }
+
+  @supports (display: grid) {
+    display: grid;
+    margin: 0;
+    grid-template-columns: repeat(auto-fill, 1fr);
+
+    @media all and (min-width: $bp-med) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @media all and (min-width: $bp-large) {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+}
+
+/**
+ * 4up grid pattern
+ * 1) This pattern stacks grid items on top of each
+ *    other until they can sit comfortably beside each other 
+ */
+.cn-l-grid--4up {
+  @media all and (min-width: $bp-med) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 - (size(1.5));
+  }
+
+  @supports (display: grid) {
+    display: grid;
+    margin: 0;
+
+    @media all and (min-width: $bp-med) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @media all and (min-width: $bp-large) {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    @media all and (min-width: $bp-xl) {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+  }
+}
+
+/**
+ * 1-2-4up grid pattern
+ * yields a Grid whose GridItems are stacked on small screens, transforms to a 2-across pattern, and
+ * ultimately transforms to a 4-across pattern
+ */
+.cn-l-grid--1-2-4up {
+  @media all and (min-width: $bp-med) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 - (size(1.5));
+  }
+
+  @supports (display: grid) {
+    display: grid;
+    margin: 0;
+
+    @media all and (min-width: $bp-med) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @media all and (min-width: $bp-large) {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+  }
+}

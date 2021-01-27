@@ -1,0 +1,22 @@
+@import '../../css/scss/abstracts/variables.scss';
+@import '../../css/scss/abstracts/mixins.scss';
+
+/*------------------------------------*\
+    #DISPLAY UTILITY CLASSES
+\*------------------------------------*/
+
+/**
+ * Display inline block utility
+ * 1) Forces display property to inline-block
+ */
+.cn-u-display-inline-block {
+  display: inline-block !important;
+}
+
+/**
+ * Display inline utility
+ * 1) Forces display property to inline
+ */
+.cn-u-display-inline {
+  display: inline !important;
+}

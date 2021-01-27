@@ -1,0 +1,109 @@
+@import '../../css/scss/abstracts/variables';
+@import '../../css/scss/abstracts/mixins';
+
+/*------------------------------------*\
+    #GRID ITEM
+\*------------------------------------*/
+/**
+ * 1) Direct child of cn-l-grid
+ */
+.cn-l-grid__item {
+  .cn-l-grid & {
+    padding: size(1.5);
+    width: 100%;
+
+    @supports (display: grid) {
+      padding: 0;
+    }
+  }
+
+  /**
+     * Grid item that span 2 columns
+     */
+  &.cn-l-grid__item.cn-l-grid__item--span-2 {
+    width: 100%;
+
+    @supports (display: grid) {
+      grid-column: 1 / -1;
+    }
+  }
+
+  .cn-l-grid--1-to-3up & {
+    margin: 0 - (size(1.5));
+
+    @media all and (min-width: $bp-large) {
+      width: 33.33%;
+    }
+
+    @supports (display: grid) {
+      width: 100%;
+      margin: 0;
+    }
+  }
+
+  .cn-l-grid--1-to-3up--centered & {
+    @media all and (min-width: $bp-xl) {
+      width: 33.33%;
+    }
+
+    @supports (display: grid) {
+      width: 100%;
+    }
+  }
+
+  .cn-l-grid--2up & {
+    @media all and (min-width: $bp-med) {
+      width: 50%;
+    }
+
+    @supports (display: grid) {
+      width: 100%;
+    }
+  }
+
+  .cn-l-grid--3up & {
+    @media all and (min-width: $bp-med) {
+      width: 50%;
+    }
+
+    @media all and (min-width: $bp-large) {
+      width: 33.33%;
+    }
+
+    @supports (display: grid) {
+      width: 100%;
+    }
+  }
+
+  .cn-l-grid--3up-alt & {
+    @media all and (min-width: $bp-med) {
+      width: 50%;
+    }
+
+    @media all and (min-width: $bp-large) {
+      width: 33.33%;
+    }
+
+    @supports (display: grid) {
+      width: 100%;
+    }
+  }
+
+  .cn-l-grid--4up & {
+    @media all and (min-width: $bp-med) {
+      width: 50%;
+    }
+
+    @media all and (min-width: $bp-large) {
+      width: 33.33%;
+    }
+
+    @media all and (min-width: $bp-xl) {
+      width: 25%;
+    }
+
+    @supports (display: grid) {
+      width: 100%;
+    }
+  }
+}

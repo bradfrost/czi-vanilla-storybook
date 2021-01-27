@@ -1,0 +1,22 @@
+@import '../../css/scss/abstracts/variables.scss';
+@import '../../css/scss/abstracts/mixins.scss';
+
+/*------------------------------------*\
+    #SHADOW CLASSES
+\*------------------------------------*/
+
+/**
+ * Box shadow small
+ * 1) Forces box shadow to box-shadow-small variable
+ */
+.cn-u-box-shadow-small {
+  box-shadow: $box-shadow-small !important;
+}
+
+/**
+ * Box shadow medium
+ * 1) Forces box shadow to box-shadow-medium variable
+ */
+.cn-u-box-shadow-medium {
+  box-shadow: $box-shadow-medium !important;
+}

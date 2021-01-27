@@ -1,0 +1,402 @@
+@import '../../css/scss/abstracts/variables';
+@import '../../css/scss/abstracts/mixins';
+
+/*------------------------------------*\
+    #BUTTON
+\*------------------------------------*/
+
+/**
+ * 1) Button or link that has functionality to it
+ * 2) Defaults to primary button
+ * 3) Margin 0 added becuase Safari has margin on the button
+ */
+.cn-c-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: size(1.5);
+  padding-right: size(5);
+  padding-bottom: size(1.5);
+  padding-left: size(5);
+  margin: 0;
+  border-width: $border-width-med;
+  border-style: solid;
+  border-color: $color-brand-blue;
+  border-radius: $border-radius;
+  @include typography-preset-5--bold;
+  font-family: inherit;
+  background-color: $color-neutral-white;
+  color: $color-brand-blue;
+  cursor: pointer;
+  transition: background-color $anim-fade-quick $anim-ease,
+    border-color $anim-fade-quick $anim-ease,
+    box-shadow $anim-fade-quick $anim-ease,
+    transform $anim-fade-quick $anim-ease;
+
+  &:hover,
+  &:focus {
+    background-color: $color-neutral-white;
+    color: $color-tint-brand-atlantic-amethyst-shade;
+    border-color: $color-tint-brand-atlantic-amethyst-shade;
+  }
+
+  &:focus {
+    @include focus;
+  }
+
+  &:active {
+    background: $color-neutral-gray-05;
+  }
+
+  /**
+   * Button within vertical button group
+   */
+  .cn-c-btn-group--vertical & {
+    display: block;
+    margin-bottom: size(1);
+  }
+
+  /**
+   * Disabled buttons
+   */
+  &:disabled {
+    background: $color-neutral-gray-20;
+    border-color: $color-neutral-gray-20;
+    color: $color-neutral-white;
+    text-shadow: none;
+    cursor: not-allowed;
+
+    &:hover,
+    &:focus {
+      background: $color-neutral-gray-20;
+      border-color: $color-neutral-gray-20;
+      box-shadow: none;
+      transform: none;
+    }
+  }
+
+  /**
+   * Loading button
+   */
+  &.cn-is-loading {
+    opacity: 0.65;
+    cursor: not-allowed;
+
+    &:hover,
+    &:focus {
+      color: $color-brand-blue;
+      border-color: $color-brand-blue;
+    }
+  }
+}
+
+/**
+ * Primary button
+ * 1) Prominent button styles that should be applied to
+ *    the most important action of a page.
+ */
+.cn-c-btn--primary {
+  border-width: $border-width-med;
+  border-style: solid;
+  border-color: $color-tint-brand-atlantic-amethyst-shade-light;
+  background-color: $color-primary-action-background;
+  color: $color-primary-action-text;
+  box-shadow: none;
+
+  &:focus {
+    @include focus;
+  }
+
+  &:active {
+    transition: none;
+    background-color: $color-primary-action-background-active;
+  }
+
+  /**
+   * Loading primary button
+   * 1) Keep the button the same colors and in the same position on hover and focus
+   */
+  &.cn-is-loading {
+    &:hover,
+    &:focus {
+      box-shadow: none;
+      color: $color-neutral-white;
+      background-color: $color-brand-blue;
+      border-color: $color-tint-brand-atlantic-amethyst-shade-light;
+      transform: translate(0px, 0px);
+    }
+  }
+}
+
+/**
+ * Small button
+ * 1) Button size is smaller than the default
+ * 2) Align button height with form field height using line length
+ */
+.cn-c-btn--small {
+  @include typography-preset-7--bold;
+  line-height: 1.9; /* 2 */
+  padding-top: size(1);
+  padding-right: size(2);
+  padding-bottom: size(1);
+  padding-left: size(2);
+}
+
+/**
+ * Tiny button
+ * 1) Button size is smaller than the default
+ */
+.cn-c-btn--tiny {
+  padding-top: size(0.5);
+  padding-right: size(1);
+  padding-bottom: size(0.5);
+  padding-left: size(1);
+}
+
+/**
+ * Link Button
+ * 1) A button that is visually styled like a text link
+ */
+.cn-c-btn--link {
+  align-items: flex-start;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  text-align: left;
+  @include text-link();
+  background-color: transparent;
+
+  &:hover,
+  &:focus {
+    background-color: transparent;
+  }
+}
+
+/**
+ * Link inverted button
+ * 1) A button that is visually styled like a text link with white text
+ * 2) Used for link button on a dark background
+ */
+.cn-c-btn--link-inverted {
+  align-items: flex-start;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  text-align: left;
+  @include text-link();
+  color: $color-neutral-white;
+  background-color: transparent;
+  transition: color $anim-fade-quick $anim-ease;
+
+  &:hover,
+  &:focus {
+    background-color: transparent;
+  }
+}
+
+/**
+ * Bare Button
+ * 1) A button that strips out borders, backgrounds, etc
+ * 2) Use for Close "X" buttons, tooltip icons, and other
+ */
+.cn-c-btn--bare {
+  background-color: transparent;
+  border: 0;
+  padding: 0;
+
+  /**
+     * Bare button within inverted feature
+     * 1) Change text color to white when bare button is within inverted feature
+     */
+  .cn-c-feature--inverted & {
+    color: $color-neutral-white; /* 1 */
+  }
+
+  &:hover,
+  &:focus {
+    color: $color-brand-blue;
+    background-color: transparent;
+  }
+}
+
+/**
+ * Block button
+ * 1) A block button fills 100% of the width of its container
+ */
+.cn-c-btn--block {
+  width: 100%;
+}
+
+/**
+ * Ghost button
+ * 1) A button that has a light border and text color used for dark backgrounds
+ */
+.cn-c-btn--ghost {
+  background-color: transparent;
+  color: $color-neutral-white;
+  border: $border-width-med solid $color-neutral-white;
+
+  &:hover,
+  &:focus {
+    color: $color-neutral-black;
+    background-color: $color-neutral-white;
+    border: $border-width-med solid $color-neutral-white;
+  }
+}
+
+/**
+ * Button text
+ * 1) Span of text used within button used to help position on display flex
+ */
+.cn-c-btn__text {
+  /**
+     * Button text within menu button and signup button
+     * 1) Visibly hide text on small screens
+     * 2) Show text on medium and large screens
+     */
+  .cn-c-header__menu-btn &,
+  .cn-c-header__signin-btn & {
+    position: absolute;
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+
+    @media all and (min-width: $bp-small) {
+      position: static;
+      visibility: visible;
+      height: auto;
+      width: auto;
+      clip: none;
+    }
+  }
+}
+
+/**
+ * Button Icon
+ * 1) Set SVG icon fill to the current text color
+ */
+.cn-c-btn__icon {
+  fill: currentColor; /* 1 */
+
+  /**
+   * Button icon within link button
+   * 1) Button icon should align with top line of text if link button text wraps
+   */
+  .cn-c-btn--link & {
+    position: relative; /* 1 */
+    top: 4px; /* 1 */
+  }
+
+  /**
+   * Button icon within small link button
+   */
+  .cn-c-btn--link.cn-c-btn--small & {
+    top: 2px;
+  }
+
+  /**
+   * Button icon within counter button
+   */
+  .cn-c-counter__btn:disabled & {
+    fill: $color-neutral-white;
+  }
+
+  /**
+   * Button icon within header menu and signup buttons
+   */
+  .cn-c-header__menu-btn &,
+  .cn-c-header__signin-btn & {
+    height: $font-size-med-2;
+    width: $font-size-med-2;
+
+    @media all and (min-width: $bp-small) {
+      height: $font-size-med;
+      width: $font-size-med;
+    }
+  }
+
+  /**
+   * Button icon within show hide component
+   * 1) Add transition for icon flip when activated
+   */
+  .cn-c-show-hide__btn & {
+    position: relative;
+    top: 8px;
+    height: 10px;
+    width: 10px;
+    transition: transform $anim-ease $anim-fade-quick; /* 1 */
+  }
+
+  /**
+   * Button icon within small show hide component
+   */
+  .cn-c-show-hide--small .cn-c-show-hide__btn & {
+    top: 5px;
+  }
+
+  /**
+   * Button icon within tiny button
+   */
+  .cn-c-btn--tiny & {
+    height: 10px;
+    width: 10px;
+  }
+
+  /**
+   * Button icon within active show hide component
+   * 1) Rotate icon 180 deg when show hide component is open
+   */
+  .cn-c-show-hide.cn-is-active .cn-c-show-hide__btn & {
+    transform: rotate(90deg); /* 1 */
+  }
+
+  .cn-c-btn.cn-is-loading & {
+    animation: rotateIcon 2s linear infinite;
+  }
+}
+
+/**
+ * Button text before icon spacing
+ * 1) Controls the spacing between the button text
+ *    and the icon that comes _before_ button text
+ */
+.cn-c-btn__icon + .cn-c-btn__text:not(.cn-u-is-vishidden) {
+  margin-left: size(1); /* 1 */
+
+  .cn-c-btn--small & {
+    margin-left: size(0.5);
+  }
+}
+
+/**
+ * Button after icon spacing
+ * 1) Controls the spacing between the button text
+ *    and the icon that comes _after_ button text
+ */
+.cn-c-btn__text:not(.cn-u-is-vishidden) + .cn-c-btn__icon {
+  margin-left: size(1); /* 1 */
+
+  /**
+   * Button icon after button text that's not vishidden within a link variant button
+   */
+  .cn-c-btn--link & {
+    margin-left: size(0.5);
+  }
+
+  .cn-c-btn--small & {
+    margin-left: size(0.5);
+  }
+}
+
+/* The animation code */
+@keyframes rotateIcon {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,23 @@
+@import '../../css/scss/abstracts/_variables.scss';
+@import '../../css/scss/abstracts/_mixins.scss';
+
+/*------------------------------------*\
+    #FIELDSET
+\*------------------------------------*/
+
+/**
+ * 1) Grouping of form fields with a legend
+ */
+.cn-c-fieldset {
+  @include fieldsetStyles;
+  margin-bottom: size(8);
+}
+
+/**
+ * Fieldset legend
+ */
+.cn-c-fieldset__legend {
+  @include legendReset;
+  @include typography-preset-4;
+  margin-bottom: size(2);
+}

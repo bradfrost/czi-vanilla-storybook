@@ -1,0 +1,23 @@
+@import '../../css/scss/abstracts/variables.scss';
+@import '../../css/scss/abstracts/mixins.scss';
+
+/*------------------------------------*\
+    #VISIBILITY UTILITY CLASSES
+\*------------------------------------*/
+
+/**
+ * Is Hidden
+ * 1) Completely remove from the flow and screen readers.
+ */
+.cn-u-is-hidden {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+/**
+ * Is Visibly Hidden
+ * 1) Hides from screens but leaves content available to assitive technologies.
+ */
+.cn-u-is-vishidden {
+  @include visuallyHide;
+}
