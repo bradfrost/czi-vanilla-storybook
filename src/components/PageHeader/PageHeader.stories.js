@@ -1,6 +1,5 @@
 import React from 'react';
 import PageHeader from './PageHeader';
-import Badge from '../Badge';
 
 export default {
   title: 'Molecules/Text/PageHeader',
@@ -33,12 +32,4 @@ Centered.args = {
   title: 'Page header title',
   description:
     'This is a description Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.'
-};
-
-export const TitleAfter = Template.bind({});
-TitleAfter.args = {
-  title: 'Page header title',
-  titleAfter: <Badge text="Title after content" />,
-  description:
-    'This is a description Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
 };

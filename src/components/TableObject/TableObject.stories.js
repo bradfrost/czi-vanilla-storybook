@@ -1,6 +1,5 @@
 import React from 'react';
 import TableObject from './TableObject';
-import Toolbar from '../Toolbar';
 import Table from '../Table';
 import TableHeader from '../TableHeader';
 import TableBody from '../TableBody';
