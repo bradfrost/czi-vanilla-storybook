@@ -1,4 +1,4 @@
-# [Name of Design System]
+# CZI Storybook
 
 The [Name of design system] is a repository of [presentational](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0) components used to build React-based products for [Company Name].
 
@@ -60,7 +60,7 @@ import Button from './Button';
 
 export default {
   title: 'Molecules/Buttons/Button',
-  component: Button
+  component: Button,
 };
 
 export const Default = () => <Button>Hello Button</Button>;
